@@ -36,7 +36,6 @@ This backend provides two chat endpoints (`/chat` and `/chat/stream`) built on t
 
 ### ⚙️ Flow Diagram
 
-```mermaid
 A[User Request] --> B{POST /chat or /chat/stream}
   B --> C["Fetch user context (dummy or real DB)"]
   C --> D["Merge system prompt + user context + RAG docs + user message"]
@@ -44,8 +43,6 @@ A[User Request] --> B{POST /chat or /chat/stream}
   E --> F[Send to Gemini via ChatService]
   F --> G["Stream chunks back (if /chat/stream)"]
   G --> H[Response to client]
-
-```
 
 ---
 
